@@ -6,7 +6,7 @@ import Image from 'next/image';
 import fate from '../../../public/imgs/fate.png';
 import sm from '../../../public/imgs/home.png';
 import lp from '../../../public/imgs/landingPage.png';
-import perfume from '../../../public/imgs/scentChan.png';
+import perfume from '../../../public/imgs/ScentChan.png';
 
 function Galary() {
 
