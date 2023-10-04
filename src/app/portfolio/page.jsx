@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from '../style/portfolio.module.css';
 import Galary from '../components/Galary';
 import lp from '../../../public/imgs/landingPage.png';
-import perfume from '../../../public/imgs/scentChan.png';
+import perfume from '../../../public/imgs/ScentChan.png';
 
 function page() {
 
