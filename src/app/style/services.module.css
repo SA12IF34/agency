@@ -1,0 +1,97 @@
+.container {
+    width: 100%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.container>div {
+    grid-column-start: 2;
+    grid-column-end: 14;
+}
+
+.services {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    margin-top: 30px;
+}
+
+.service {
+    width: 100%;
+    height: max-content;
+    padding: 25px;
+    border-radius: 15px;
+    background-color: #D9D9D9;
+    position: relative;
+}
+
+.service p {
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.service::before {
+    background-color: #2E2624;
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: white;
+    font-size: 1.08em;
+    position: absolute;
+    top: 0;
+    left: 25px;
+    transform: translateY(-50%);
+}
+
+
+.service:nth-child(1)::before {
+    content: 'Building Personal Websites'
+}
+.service:nth-child(2)::before {
+    content: 'Building Business Websites';
+}
+.service:nth-child(3)::before {
+    content: 'Building CMS';
+}
+.service:nth-child(4)::before {
+    content: 'Designing & Building Landing Pages';
+}
+
+.container h2 {
+    font-weight: 500;
+}
+
+.links {
+    margin: 10px;
+}
+
+.links>a>div {
+    display: flex;
+    align-items: center;
+}
+
+.links h3 {
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.links svg {
+    width: 60px;
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .service {
+        background-color: transparent;
+        padding: 30px 0;
+
+    }
+
+    .service::before {
+        left: 0;
+    }
+}
