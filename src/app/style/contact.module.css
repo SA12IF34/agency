@@ -1,1 +1,71 @@
+.container {
+    width: 100%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    padding-bottom: 50px;
+}
 
+.container>div {
+    grid-column-start: 2;
+    grid-column-end: 14;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.container h2,
+.container h3 {
+    font-weight: 500;
+}
+
+.accounts ul {
+    list-style: none;
+    margin: 15px;
+}
+
+.accounts ul li {
+    text-decoration: underline;
+    line-height: 1.5;
+}
+
+.form form {
+    width: 80%;
+    margin: auto;
+}
+
+.form form input, 
+.form form textarea {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    background-color: rgba(38, 14, 7, 0.85);
+    color: white;
+    padding: 7px;
+    border-radius: 7px;
+    font-family: sans-serif !important;
+    font-size: 1.05em;
+}
+
+.form form input {
+    height: 25px;
+}
+
+.form form textarea {
+    height: 200px;
+}
+
+.form form button {
+    width: 120px;
+    font-size: 1.2em;
+    background-color: rgb(38, 14, 7);
+    color: white;
+    padding: 5px 0;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    margin-top: 10px;
+}
