@@ -1,14 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Head from 'next/head';
 import logo from '../../../public/logo.jpg'
 
 function Layout({children}) {
   return (
     <>
-      <Head>
-      <link rel="icon" href="../../../public/logo.jpg" sizes="any" />
-      </Head>
       <div className='root'>
         <header>
             <Link href={'/'}>

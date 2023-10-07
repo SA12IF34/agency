@@ -44,7 +44,7 @@ header {
   overflow: hidden;
 }
 
-header>Link {
+header>a {
   grid-column-start: 2;
 }
 
