@@ -32,7 +32,7 @@
 
 .form form {
     width: 80%;
-    margin: auto;
+    /* margin: auto; */
 }
 
 .form form input, 
@@ -68,4 +68,16 @@
     outline: none;
     border-radius: 8px;
     margin-top: 10px;
+}
+
+@media screen and (max-width: 912px) {
+    .form form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container h2 {
+        font-size: 1.3em;
+    }
 }

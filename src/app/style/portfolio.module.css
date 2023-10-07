@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: repeat(14, 1fr);
     padding-bottom: 50px;
+    overflow: hidden;
 }
 
 .container section {
@@ -12,7 +13,7 @@
     height: max-content;
     margin-top: 80px;
 }
-
+ 
 .container section h2 {
     margin-left: 40px;
     font-weight: 500;
@@ -24,7 +25,7 @@
 
 .samples>div>div {
     display: flex;
-    column-gap: 80px;
+    column-gap: 30px;
     width: max-content;
     position: relative;
     transition: 0.3s;
@@ -32,11 +33,12 @@
 
 .samples>div {
     overflow-x: hidden;
+    margin: 0 60px;
 }
 
 .sample {
-    width: 400px;
-    height: 300px;
+    width: calc((((100vw - 90px*2 - 10px) - (100vw/14) * 2)/3));
+    height: calc(((100vw - 90px*2) - (100vw/14) * 4)/3); 
     position: relative;
 }
 
@@ -45,7 +47,6 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    transform: translateX(120px);
 }
 
 .sample>a {
@@ -72,9 +73,7 @@
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 7px;
     top: 50%;
-    transform: translateY(-50%);
 }
 
 .samples button svg {
@@ -82,11 +81,13 @@
 }
 
 .left {
-    right: 100%;
+    left: 0%;
+    transform: translateX(-50%) translateY(-50%) ;
 }
 
 .right {
-    left: 100%;
+    right: 0%;
+    transform: translateX(50%) translateY(-50%) ;
 }
 
 .studyCase>div {
@@ -109,6 +110,7 @@
 .studyCase>div>.imgs img {
     width: 90%;
     height: auto;
+    
 }
 
 .one {
@@ -146,3 +148,58 @@
     align-items: center;
 }
 
+
+@media screen and (max-width: 912px) {
+    .sample {
+        width: calc((((100vw - 90px*2) - (100vw/14) * 2)/2));
+        height: calc(((100vw - 90px*2) - (100vw/14) * 4)/2); 
+    }
+
+    .samples>div {
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container h2 {
+        margin-left: 0 !important;
+        font-size: 1.3em;
+    }
+
+    .samples button svg {
+        height: 60px;
+    }
+
+    .sample {
+        width: calc((((100vw - 60px*2) - (100vw/14) * 2)));
+        height: calc(((100vw - 60px*2) - (100vw/14) * 4)); 
+    }
+
+    .samples>div {
+        padding: 0 0;
+    }
+
+    .studyCase>div>.imgs {
+        grid-template-rows: 50% 50%;
+        grid-template-columns: none;
+        height: max-content;
+    }
+
+    .studyCase>div>.imgs img {
+        margin: 10px 0;
+    }
+
+    .one {
+        grid-column-start: none;
+        grid-column-end: none;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        justify-self: self-start;
+    }
+
+    .two {
+        grid-column-start: none;
+        grid-row-start: 2;
+        justify-self: self-end;
+    }
+}
