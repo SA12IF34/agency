@@ -3,6 +3,13 @@ import Link from 'next/link';
 import bg from '../../public/heroBg.jpg';
 import styles from './style/page.module.css';
 
+export const metadata = {
+  icons: {
+    icon: '../../public/logo.jpg',
+    apple: '../../public/logo.jpg',
+  }
+}
+
 export default function Home() {
   return (
     <div className={styles.container}>

@@ -5,6 +5,12 @@ import Galary from '../components/Galary';
 import lp from '../../../public/imgs/landingPage.png';
 import perfume from '../../../public/imgs/ScentChan.png';
 
+
+export const metadata = {
+  title: "DigitalElevate | Portfolio",
+  description: "work portfolio",
+}
+
 function page() {
 
   return (

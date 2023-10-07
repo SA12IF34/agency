@@ -39,13 +39,18 @@ footer {
 header {
   height: 10vh;
   width: 100%;
-  padding: 10px;
+  padding: 0 10px;
   box-shadow: 0px 1px 6px 0px gray;
   overflow: hidden;
 }
 
-header h1 {
+header>Link {
   grid-column-start: 2;
+}
+
+header img {
+  width: 80px;
+  height: auto;
 }
 
 header ul {

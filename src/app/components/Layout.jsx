@@ -1,10 +1,19 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import Head from 'next/head';
+import logo from '../../../public/logo.jpg'
 
 function Layout({children}) {
   return (
-    <div className='root'>
+    <>
+      <Head>
+      <link rel="icon" href="../../../public/logo.jpg" sizes="any" />
+      </Head>
+      <div className='root'>
         <header>
-            <h1>Name</h1>
+            <Link href={'/'}>
+              <Image src={logo} />
+            </Link>
             <ul>
                 <li>
                   <Link href={'/about'}>About</Link>
@@ -25,6 +34,7 @@ function Layout({children}) {
             <span>copyright &#169; {new Date().getFullYear()}</span>
         </footer>
     </div>
+    </>
   )
 }
 
